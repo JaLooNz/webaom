@@ -1,5 +1,9 @@
 WebAOM!
 
+2.2.0 2025.08.02:
+- Added Launch4j to build WebAOM.exe
+- Migrate to Gradle project
+
 2.1.0 2023.04.08:
 *More code cleanup using stricter Java compiler settings.
 *Updated Jacksum classes from v1.5.0 to v3.5.0.

@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'edu.sc.seis.launch4j' version '3.0.7'
+    id 'com.gradleup.shadow' version '8.3.8'
+}
+
+group = 'com.epox.webaom'
+version = '2.2.0'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.gnu:gnu-crypto:2.0.1")
+    implementation("org.xerial:sqlite-jdbc:3.50.3.0")
+}
+
+// Configure the main class for the application
+application {
+    mainClass = 'epox.webaom.WebAOM' // Replace with your actual main class
+}
+
+launch4j {
+    mainClassName = application.mainClass
+    icon = "${projectDir}/images/webaom.ico"
+
+    version = project.version                // e.g., 1.19.16.0
+    textVersion = project.version
+
+    fileDescription = "WebAOM is a simple Java applet/application that hashes files and adds them to your MyList at AniDB."
+    productName = "WebAOM"
+    companyName = "AniDB"
+    copyright = "© 2025 AniDB"
+    outfile = "WebAOM.exe"
+
+    jarTask = project.tasks.shadowJar
+    requires64Bit = true
+}

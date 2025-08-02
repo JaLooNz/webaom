@@ -7,10 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.1] - 2025-08-02
+### Fixed
+- Kanji titles not showing up correctly due to font issue
+
 ## [2.2.0] - 2025-08-02
 ### Add
 - Added Launch4j to build WebAOM.exe
 - Migrate to Gradle project
+- Add Github actions for auto-build
 
 ## [2.1.0] - 2023-04-09
 ### Fixed

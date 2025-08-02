@@ -47,7 +47,7 @@ public class WebAOM {
     }
 
     private static void mmain() throws Exception {
-        WebAOM.setMyFont(new Font("Tahoma", Font.PLAIN, 11), new Font("Times", Font.PLAIN, 11));
+        WebAOM.setMyFont(new Font("SansSerif", Font.PLAIN, 11), new Font("SansSerif", Font.PLAIN, 11));
 
         JFrame jf = new JFrame("WebAOM " + A.S_VER + " Loading...");
         A.frame = jf;

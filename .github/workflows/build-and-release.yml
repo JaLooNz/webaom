@@ -98,16 +98,12 @@ jobs:
         run: |
           FILES=()
           while IFS= read -r jar; do
-            if [[ "$jar" != *gradle-wrapper* ]]; then
-              FILES+=("$jar")
-            fi
-          done < <(find . -name '*.jar')
+            FILES+=("$jar")
+          done < <(find . -name 'webaom-*-all.jar')
 
           while IFS= read -r exe; do
-            if [[ "$exe" != *gradle-wrapper* ]]; then
-              FILES+=("$exe")
-            fi
-          done < <(find . -name '*.exe')
+            FILES+=("$exe")
+          done < <(find . -name 'WebAOM.exe')
 
           echo "Uploading files:"
           for f in "${FILES[@]}"; do echo " - $f"; done

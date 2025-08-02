@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.epox.webaom'
-version = '2.2.0'
+version = '2.2.1'
 sourceCompatibility = '17'
 targetCompatibility = '17'
 
